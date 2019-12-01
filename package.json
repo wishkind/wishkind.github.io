@@ -30,17 +30,31 @@
     "antd": "^3.25.3",
     "babel-loader": "^8.0.6",
     "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.7.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.17.0",
     "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
     "typescript": "^3.7.2",
+    "velocity-animate": "^1.5.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.13.0"
   }
 }
