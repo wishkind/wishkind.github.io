@@ -71,27 +71,29 @@ export default  class App extends Component {
             "name": "deng",
             "age": 56
         };
+         this.A = new Float32Array(32);
+         this.A[0] = 0;
     }
-    enterHandler = (e, ele) => {
+    enterHandler = (event, ele) => {
         ele.toggleClass("hover");
         $(".hover").velocity("stop").velocity({ scale: 1.25 }, { duration: 200 });
     }
 
-    leaveHandler = (e, ele) => {
+    leaveHandler = (event, ele) => {
         $(".hover").velocity("stop").velocity({ scale: 1 }, { duration: 200 }).toggleClass("hover");
     }
 
-
+   
     componentDidMount() {
         const that = this;
         $(".radial-menu-button").mouseenter(function(e) {
-            that.enterHandler(e, $(this));
+            that.enterHandler(event, $(this));
         }).mouseleave(function() {
-            that.leaveHandler(e, $(this));
+            that.leaveHandler(event, $(this));
         });
 
-
-        this.testFloat32Buffer();
+        console.log("ggg");
+        //this.testFloat32Buffer();
     }
 
     async test() {
@@ -99,12 +101,11 @@ export default  class App extends Component {
         await data.load();
     }
     testFloat32Buffer() {
-     //   const A = new Float32Buffer(32);
-       // A[0]=12;
+        this.A[0] = this.A[0] + 1;
         console.log("ggg");
+        alert(this.A[0]);
     }   
     render() {
-        this.testFloat32Buffer();
         const {name, age} = this.state;
         const {gameId, phone} = this.props;
         return <div>
